@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+body{
+      background: linear-gradient(45deg,rgb(237, 76, 165),rgb(85, 197, 241));
+      /* background-image: url(reg2.webp); */
+      opacity: 1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin-left: 90px;
+    }        
+label{
+    /* margin: 10px; */
+    display: block;
+}
+input{
+    padding-right:90px ;
+
+}
+    </style>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <hr>
+    <p>Please fill out the form below:</p>
+    Already have an account? <a href="login.html" style="text-decoration: underline;color: blue;">Login here</a><br>
+<br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <label><input type="checkbox"> I have read all the<a href="#">Terms and conditions</a> of the website</label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

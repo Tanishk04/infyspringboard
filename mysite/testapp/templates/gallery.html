@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Gallery</title>
+<link rel="stylesheet" href="style1.css">
+{% load static %}
+<link rel="stylesheet" href="{% static 'style1.css' %}">
+</head>
+<body>
+  <header>
+    <h1>Memorable Events</h1>
+    <p>A glimpse into our past events</p>
+  </header>
+
+  <section class="gallery-container">
+    <h2>Explore Our Events</h2>
+    <div class="image-grid">
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent1.jpg' %}" alt="Event 1">
+        <figcaption>Birthday Parties</figcaption>
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+      </figure>
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent2.jpg' %}" alt="Event 2">
+        <figcaption>Inspiring Music Festival</figcaption>
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+      </figure>
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent3.jpg' %}" alt="Event 3">
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+        <figcaption>Delicious Food Fair</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent4.jpg' %}" alt="Event 4">
+        <figcaption>Farewell Parties</figcaption>
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+      </figure>
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent5.jpg' %}" alt="Event 5">
+        <figcaption>Wedding</figcaption>
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+      </figure>
+      <figure class="gallery-item">
+        <img src="{% static 'images/bevent6.jpg' %}" alt="Event 6">
+        <figcaption>Business Events</figcaption>
+        <a href="#" class="overlay">
+          <h3>View Details</h3>
+        </a>
+      </figure>
+      </div>
+  </section>
+
+</body>
+</html>

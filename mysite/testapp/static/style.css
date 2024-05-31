@@ -1,0 +1,25 @@
+.navbar-brand{
+    font-style: italic;
+    text-transform:capitalize;
+    font-weight: bold;
+    font-size: 20;
+    padding: 10px;
+}
+#logo{
+    width: 20px;
+    height: 20px;
+}
+.carousel {
+    width: auto; 
+    height: 500px; /* Set your desired height */
+    margin: auto; /* Center the carousel */
+}
+img{
+    height: 500px;
+}
+.navbar{
+    position: sticky;
+    top:0px;
+    left:0px;
+    z-index: 10;
+}

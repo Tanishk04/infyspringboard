@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Registration form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    body{
+      background: linear-gradient(45deg,rgb(237, 76, 165),rgb(85, 197, 241));
+      /* background-image: url(reg2.webp); */
+      opacity: 1;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .container{
+      /* margin-right: 100px; */
+      width:800px;
+      height:600px;
+      border-color: black;
+    }
+    a{
+      text-decoration: underline;
+      color: rgb(36, 36, 228);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Registration Form</h2>
+  Already have an account? <a href="login.html" style="text-decoration: underline;color: blue;">Login here</a>
+
+  <form role="form">
+    <div class="form-group">
+        <label for="name">Name:</label>
+  <input type="text" class="form-control" id="name" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone no:</label>
+  <input type="number" class="form-control" id="phone" placeholder="Enter phoneno">
+      </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+<input type="email" class="form-control" id="email" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="pwd1">Password:</label>
+      <input type="password" class="form-control" id="pwd1" placeholder="Enter password">
+    </div>
+    <div class="form-group">
+      <label for="pwd2">Confirm Password:</label>
+      <input type="password" class="form-control" id="pwd2" placeholder="Enter password again">
+    </div>
+    <div class="form-group">
+        <label for="pwd">Date of Birth:</label>
+        <input type="date" class="form-control" id="dob" placeholder="Enter date of Birth">
+      </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> I have read all the<a href="#">Terms and conditions</a> of the website</label>
+    </div>
+<button type="submit" class="btn btn-default">Submit</button>
+  </form>
+
+</div>
+
+  <script>
+    $(document).ready(function(){
+        $('form').on('submit', function(event){
+            var valid = true;
+            // Validate fields
+            if ($('#pwd1').val() !== $('#pwd2').val()) {
+                alert("Passwords do not match!");
+                valid = false;
+            }
+            // Add more validation as needed
+            return valid;
+        });
+    });
+</script>
+
+</body></html>

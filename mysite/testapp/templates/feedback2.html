@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>Feedback Form</title>
+</head>
+<style>
+    body{background-color:yellow;}
+    h1{background-color:red;color:yellow;}
+    p{background-color:yellow;color:red;}
+</style>
+    
+<body style="background-color: yellow;">
+    
+    <h1>Employee Feedback Form</h1><hr>
+    <p>Please fill out the form below:</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+    <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
